@@ -26,7 +26,7 @@ public class SavingsAccountUpEndDownCasting extends AccoutHeranca{
 	}
 	
 	@Override
-	public final void withdraw(double amount) {
+	public void withdraw(double amount) {
 		balance -= amount;
 	}
 }

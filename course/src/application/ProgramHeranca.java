@@ -38,6 +38,7 @@ public class ProgramHeranca {
 		}
 		*/
 		
+		/*
 		AccoutHeranca acc1 = new AccoutHeranca(1001, "Alex", 1000.0);
 		acc1.withdraw(200.0);
 		System.out.println(acc1.getBalance());
@@ -49,6 +50,16 @@ public class ProgramHeranca {
 		AccoutHeranca acc3 = new BusibessAccountHeranca(1003, "bob", 1000.0, 500.0);
 		acc3.withdraw(200.0);
 		System.out.println(acc3.getBalance());
+		*/
+		
+		AccoutHeranca x = new AccoutHeranca(1020, "alex", 1000.0);
+		AccoutHeranca y = new SavingsAccountUpEndDownCasting(1023, "maria", 1000.0, 0.01);
+		
+		x.withdraw(50.0);
+		y.withdraw(50.0);
+		
+		System.out.println(x.getBalance());
+		System.out.println(y.getBalance());
 	}
 
 }
