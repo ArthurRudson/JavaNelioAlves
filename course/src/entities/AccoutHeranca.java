@@ -5,7 +5,7 @@ public class AccoutHeranca {
 	
 	private Integer number;
 	private String holder;
-	private Double balance;
+	protected Double balance;
 	
 	public AccoutHeranca() {
 		

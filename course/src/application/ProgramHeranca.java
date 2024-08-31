@@ -1,13 +1,40 @@
 package application;
 
+import entities.AccoutHeranca;
 import entities.BusibessAccountHeranca;
+import entities.SavingsAccountUpEndDownCasting;
 
 public class ProgramHeranca {
 
 	public static void main(String[] args) {
 		
-		BusibessAccountHeranca account = new BusibessAccountHeranca();
-		account.
+		AccoutHeranca acc = new AccoutHeranca(1001, "Alex", 0.0);
+		BusibessAccountHeranca bacc = new BusibessAccountHeranca(1002, "Maria", 0.0, 500.0);
+		
+		// UPCASTING 
+		
+		AccoutHeranca acc1 = bacc;
+		AccoutHeranca acc2 = new BusibessAccountHeranca(1003, "Bob", 0.0, 200.0);
+		AccoutHeranca acc3 = new SavingsAccountUpEndDownCasting(1004, "ana", 0.0, 0.01);
+		
+		// DOWNCASTING
+		
+		BusibessAccountHeranca acc4 = (BusibessAccountHeranca)acc2;
+		acc4.loan(100.0);
+		
+		
+		// BusibessAccountHeranca acc5 = (BusibessAccountHeranca)acc3;
+		if (acc3 instanceof BusibessAccountHeranca) {
+			BusibessAccountHeranca acc5 = (BusibessAccountHeranca)acc3;
+			acc5.loan(200.0);
+			System.out.println("LOAN!");
+		}
+		if (acc3 instanceof SavingsAccountUpEndDownCasting) {
+			SavingsAccountUpEndDownCasting acc5 = (SavingsAccountUpEndDownCasting)acc3;
+			acc5.updateBalance();
+			System.out.println("UPDATE!");
+		}
+		
 		
 	}
 

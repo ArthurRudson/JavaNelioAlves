@@ -24,7 +24,7 @@ public class BusibessAccountHeranca extends AccoutHeranca {
 	
 	public void loan(double amount) {
 		if (amount <= loanLimit) {
-			deposit(amount);
+			balance += amount - 10;
 		}
 		
 	}
