@@ -24,4 +24,9 @@ public class SavingsAccountUpEndDownCasting extends AccoutHeranca{
 	public void updateBalance() {
 		balance += balance * getInteresRate();
 	}
+	
+	@Override
+	public void withdraw(double amount) {
+		balance -= amount;
+	}
 }

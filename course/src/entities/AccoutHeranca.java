@@ -38,7 +38,7 @@ public class AccoutHeranca {
 	}
 	
 	public void withdraw(double amount) {
-		balance -= amount;
+		balance -= amount + 5.0;
 	}
 	
 	public void deposit(double amount) {

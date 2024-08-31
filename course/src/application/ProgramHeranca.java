@@ -8,6 +8,8 @@ public class ProgramHeranca {
 
 	public static void main(String[] args) {
 		
+		/*
+		
 		AccoutHeranca acc = new AccoutHeranca(1001, "Alex", 0.0);
 		BusibessAccountHeranca bacc = new BusibessAccountHeranca(1002, "Maria", 0.0, 500.0);
 		
@@ -34,8 +36,19 @@ public class ProgramHeranca {
 			acc5.updateBalance();
 			System.out.println("UPDATE!");
 		}
+		*/
 		
+		AccoutHeranca acc1 = new AccoutHeranca(1001, "Alex", 1000.0);
+		acc1.withdraw(200.0);
+		System.out.println(acc1.getBalance());
 		
+		AccoutHeranca acc2 = new SavingsAccountUpEndDownCasting(1002, "maria", 1000.0, 0.01);
+		acc2.withdraw(200.0);
+		System.out.println(acc2.getBalance());	
+		
+		AccoutHeranca acc3 = new BusibessAccountHeranca(1003, "bob", 1000.0, 500.0);
+		acc3.withdraw(200.0);
+		System.out.println(acc3.getBalance());
 	}
 
 }
