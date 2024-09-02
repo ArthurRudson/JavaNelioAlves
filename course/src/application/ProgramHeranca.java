@@ -52,13 +52,13 @@ public class ProgramHeranca {
 		System.out.println(acc3.getBalance());
 		*/
 		
-		AccoutHeranca x = new AccoutHeranca(1020, "alex", 1000.0);
+		//AccoutHeranca x = new AccoutHeranca(1020, "alex", 1000.0);
 		AccoutHeranca y = new SavingsAccountUpEndDownCasting(1023, "maria", 1000.0, 0.01);
 		
-		x.withdraw(50.0);
+		// x.withdraw(50.0);
 		y.withdraw(50.0);
 		
-		System.out.println(x.getBalance());
+		// System.out.println(x.getBalance());
 		System.out.println(y.getBalance());
 	}
 

@@ -1,6 +1,6 @@
 package entities;
 
-public class AccoutHeranca {
+public abstract class AccoutHeranca {
 
 	
 	private Integer number;
