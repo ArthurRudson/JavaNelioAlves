@@ -40,7 +40,7 @@ public class Reservation {
 
 	public long durtion() {
 		long diff = getCheckOut().getTime() - getCheckIn().getTime();
-		return TimeUnit.DAYS.convert(diff, TimeUnit.MICROSECONDS);
+		return TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS);
 	}
 	
 	public void updateDates(Date checkIn, Date checkOut) {
@@ -50,7 +50,7 @@ public class Reservation {
 
 	@Override
 	public String toString() {
-		return "Room " + getRoomNumber() + ", check-in : " + sdf.format(checkIn) + ", check-out: " + sdf.format(checkOut) + ", " + durtion() + "nights";
+		return "Room " + getRoomNumber() + ", check-in : " + sdf.format(checkIn) + ", check-out: " + sdf.format(checkOut) + ", " + durtion() + " nights";
 	}
 	
 	
