@@ -1,22 +1,24 @@
 package model.entities;
 
+import model.exceptins.DomainException;
+
 public class AccountExercicio {
 	
 	private Integer number;
 	private String holder;
 	private Double balance;
-	private Double withdraw;
+	private Double withdrawLimit;
 	
 	public AccountExercicio() {
 		
 	}
 
-	public AccountExercicio(Integer number, String holder, Double balance, Double withdraw) {
+	public AccountExercicio(Integer number, String holder, Double balance, Double withdrawLimit) {
 		super();
 		this.number = number;
 		this.holder = holder;
 		this.balance = balance;
-		this.withdraw = withdraw;
+		this.withdrawLimit = withdrawLimit;
 	}
 
 	public Integer getNumber() {
@@ -43,20 +45,30 @@ public class AccountExercicio {
 		this.balance = balance;
 	}
 
-	public Double getWithdraw() {
-		return withdraw;
+	public Double getWithdrawLimit() {
+		return withdrawLimit;
 	}
 
-	public void setWithdraw(Double withdraw) {
-		this.withdraw = withdraw;
+	public void setWithdrawLimit(Double withdrawLimit) {
+		this.withdrawLimit = withdrawLimit;
 	}
 	
 	public void deposit(double amount) {
-		
+		setBalance(getBalance() + amount);
 	}
 	
 	public void withdraw(double amount) {
-		
+		validateWithdraw(amount);
+		setBalance(getBalance() - amount);
 	}
+	
+	public void validateWithdraw(double amount) throws DomainException {
+		if (getWithdrawLimit() < amount) {
+			throw new DomainException("The amount exceeds withdraw limit");
+		}
+		if(amount > getBalance()) {
+			throw new DomainException("Not enough balance");
+		}
+ 	}
 
 }
