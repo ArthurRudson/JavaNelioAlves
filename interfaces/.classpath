@@ -7,5 +7,6 @@
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="interfaces.exercicio"/>
+	<classpathentry kind="src" path="interfaces-herdar-vs-cumprirContrato"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
