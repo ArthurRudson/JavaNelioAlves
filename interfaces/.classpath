@@ -9,5 +9,6 @@
 	<classpathentry kind="src" path="interfaces.exercicio"/>
 	<classpathentry kind="src" path="interfaces-herdar-vs-cumprirContrato"/>
 	<classpathentry kind="src" path="interfaceComparable"/>
+	<classpathentry kind="src" path="defaultMethods"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
