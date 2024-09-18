@@ -10,5 +10,6 @@
 	<classpathentry kind="src" path="curingasDelimitados"/>
 	<classpathentry kind="src" path="hashCodeAndEquals"/>
 	<classpathentry kind="src" path="Set"/>
+	<classpathentry kind="src" path="Map"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
